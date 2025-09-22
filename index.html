@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+<form name="form_daftar">
+    <table>
+        <tr>
+            <td>Input Bilangan 1</td>
+            <td><input type="number" name="bil1" size="30"></td>
+        </tr>
+        <tr>
+            <td>Input Bilangan 2</td>
+            <td><input type="number" name="bil2" size="30"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+            <button type="button"  onclick="hitung('+')">+</button>
+            <button type="button"  onclick="hitung('-')">-</button>
+            <button type="button"  onclick="hitung('*')">*</button>
+            <button type="button"  onclick="hitung('/')">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Output</td>
+            <td><input type="number" name="output" size="30" readonly></td>
+        </tr>
+    </table>
+   
+</form> 
+<script>
+    function hitung(op){
+        let f=document.form_daftar;
+        f.output.value=eval(f.bil1.value+op+f.bil2.value);
+}
+</script>
+</body>
+</html>
+
+  
